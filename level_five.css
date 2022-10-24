@@ -1,16 +1,14 @@
 .container {
   display: grid;
-  border: solid black;
   /* Style rows and columns */
-  grid-template-columns: repeat(5, minmax(100px, 1fr));
-  grid-template-rows: repeat(1fr 1fr 7fr 1fr);
-
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-rows: repeat( 10, minmax( 100px, 1fr));
 }
 
 #title {
   grid-column-start:1;
-  grid-column-start:span 5; /*this should span the entire page, look into using negative numbers in grid-column-end*/
- 
+  grid-column-end: -1; /*this should span the entire page, look into using negative numbers in grid-column-end*/
+
 }
 
 .friend {
