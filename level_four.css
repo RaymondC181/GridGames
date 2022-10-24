@@ -1,26 +1,43 @@
 .container {
   display: grid;
-
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1fr 1fr 7fr 1fr);
+  height: 800px;
 }
 
 #navbar {
-
+  grid-column-start: 1;
+  grid-column-start: span 5;
+  grid-column-end: 6;
 }
 
 #sidebar {
   writing-mode: vertical-rl;
-
+  grid-column-start: 1;
+  grid-column-start: span 1;
+ 
+  grid-row-start: 2;
+  grid-row-end:7;
 }
 
 #title {
-
+  grid-column-start: 2;
+  grid-column-start: span 4;
 }
 
 
 #content {
+  grid-column-start: 2;
+  grid-column-start: span 4;
 
+  grid-row-start: 3;
+  grid-row-end:7;
 }
 
 #footer {
+  grid-column-start: 1;
+  grid-column-start: span 5;
+
+  grid-row-start: 7;
 
 }

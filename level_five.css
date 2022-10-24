@@ -1,14 +1,39 @@
 .container {
   display: grid;
+  border: solid black;
   /* Style rows and columns */
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  grid-template-rows: repeat(1fr 1fr 7fr 1fr);
+
 }
 
 #title {
-  grid-column: /*this should span the entire page, look into using negative numbers in grid-column-end*/;
+  grid-column-start:1;
+  grid-column-start:span 5; /*this should span the entire page, look into using negative numbers in grid-column-end*/
+ 
 }
 
 .friend {
-
-}
+  grid-area: auto;
+  }
 
 /* Style other types of family members below*/
+#siblings{
+  grid-column-start: span 2;
+  grid-row-start: span 1;
+}
+
+#AuntsandUncles{
+  grid-column-start: span 1;
+  grid-row-start: span 2;
+}
+
+#Grandparents{
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+
+#Cousinsandfriends{
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}
